@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>COUNT</title>
+</head>
+<body>
+<h1>COUNT</h1>
+
+<h2>Your Original Text :</h2>
+<h5>{{ fulltext }}</h5>
+
+<h2>Total words in your text:</h2>
+    <h3>{{ word_count }}
+</h3>
+
+<h2>Count of each word in your text :</h2>
+<h3>
+{{ word_repeat }}</br>
+
+    {% for i,j in word_repeat.items %}
+    {{ i }} :  {{ j }}</br>
+    {% endfor %}
+
+
+</h3>
+
+<h2>Max repeated word :</h2>
+<h3>{{ max_repeat }}</h3>
+<a href="{% url 'home' %}">Start Again</a>
+
+
+
+</body>
+</html>
